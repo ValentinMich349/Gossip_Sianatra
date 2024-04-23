@@ -31,7 +31,3 @@ Bienvenue sur l'application web Gossip ! Cette application vous permet de consul
 ## Auteurs
 
 - [Valentin](https://github.com/ValentinMich349)
-
-## Licence
-
-Ce projet est sous licence [MIT](LICENSE).
