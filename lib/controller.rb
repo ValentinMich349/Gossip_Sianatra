@@ -30,7 +30,7 @@ class ApplicationController < Sinatra::Base
 
 #  envoi modif elmt
   post '/gossips/:id/edit/' do
-  Gossip.update(params["id"], params["updated_author"])
+  Gossip.update(params["id"], params["updated_author"], params["updated_content"])
   redirect "/gossips/#{params['id']}"
   end
 end
