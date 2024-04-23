@@ -1,0 +1,54 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <title>The Gossip Project</title>
+  </head>
+  <body style="background-color: #5b1664d8; color: white">
+    <header class="text-center" style = "background-color: #53045e; color: #ffffff" >
+      <h1>Bienvenue sur le site de Gossip !</h1>
+    </header>
+
+
+
+    <!--Création d un Potin-->
+    <section>
+      <h3 class="text-center">si tu le souhaite tu peux déjà créer un potin :</h3>
+      <div class="d-flex justify-content-center">
+        <a
+          class="btn btn-info btn-lg"
+          href="/gossips/new/"
+          style="appearance: button; font-size: 2rem; color: white; border-radius: 15px; box-shadow: 1px 1px 18px 5px rgba(0, 0, 0, 0.81);">
+          Créer un Potin</a>
+      </div>
+    </section>
+
+<!--Liste des Potins-->
+    <% gossips.each_with_index do |gossip, id| %>
+    <main class="container w-300" style="margin-top: 45px; margin-bottom: 45px">
+      <div class="row row-cols-1 row-cols-ml-3">
+          <div class="col">
+            <div class="card border-0 mx-auto bg-dark text-white">
+              <div class="card-header text-center" style= "color: #ffffff">Potin à ne pas rater !</div>
+              <div class="card-body">
+              <h5 class="card-title text-center"><a href="/gossips/<%=id.to_i + 1%>">Potin n°<%=id.to_i + 1%></a></h5>
+              <p class="card-text text-center">Auteur du Potin : <%= gossip.author %><br/>
+              Le super potin : <%= gossip.content %></p>
+            </div>
+          </div>
+        </div>
+    </main>
+      <% end %>
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

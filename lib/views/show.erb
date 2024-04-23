@@ -1,0 +1,32 @@
+
+<!doctype html>
+<html lang="fr">
+  <head>
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body style= "background-color: grey">
+
+<!--Index du Potin en titre-->
+      <header class="text-center p-2" style = "background-color: #d3d672; color: #4f4e52; box-shadow: black 1px 2px 6px" >
+        <h1>voici la page du potin n°<%= params['id'].to_i%></h1>
+      </header>
+
+<!--Auteur et contenu du potin concerné-->
+      <h2 class="p-3 text-center" style="color: white; text-shadow: black 1px 1px 5px">l auteur est : <%= gossip.author %></h2>
+      <h2 class="p-3 text-center" style="color: white; text-shadow: black 1px 1px 5px">le contenu est : <%= gossip.content %></h2>
+      <a href="/gossips/<%= params['id'].to_i%>/edit" role="button" class="btn btn-outline-warning w-100 mt-3">Mettre à jour le Potin</a>
+
+<!--Lien vers index des potins-->
+      <a href="/" role="button" class="btn btn-outline-info w-100 mt-3">Revenir aux Potins</a>
+
+      <!-- Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
